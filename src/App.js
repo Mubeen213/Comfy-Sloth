@@ -16,8 +16,8 @@ function App() {
     <Router>
       <Navbar />
       <Sidebar />
-      <Footer />
-      <switch>
+
+      <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -39,7 +39,8 @@ function App() {
         <Route exact path='*'>
           <Error />
         </Route>
-      </switch>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
