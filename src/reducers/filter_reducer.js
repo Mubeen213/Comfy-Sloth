@@ -13,8 +13,8 @@ const filter_reducer = (state, action) => {
   if (action.type === LOAD_PRODUCTS) {
     return {
       ...state,
+      filtered_products: [...action.payload],
       all_products: [...action.payload],
-      filterd_Products: [...action.payload],
     };
   }
   throw new Error(`No Matching "${action.type}" - action type`);
