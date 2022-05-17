@@ -34,14 +34,18 @@ export const CartProvider = ({ children }) => {
   };
 
   //remove Item
-  const removeItem = (id) => {};
+  const removeItem = (id) => {
+    dispatch({ type: REMOVE_CART_ITEM, payload: id });
+  };
 
   //toggle amount
   const toggleAmount = (id, value) => {};
 
   //clear cart
 
-  const clearCart = () => {};
+  const clearCart = () => {
+    dispatch({ type: CLEAR_CART });
+  };
 
   //Local storage
 
