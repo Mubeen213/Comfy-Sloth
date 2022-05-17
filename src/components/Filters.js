@@ -6,7 +6,16 @@ import { FaCheck } from 'react-icons/fa';
 
 const Filters = () => {
   const {
-    filters: { text, category, company, color, min_price, max_price, price },
+    filters: {
+      text,
+      category,
+      company,
+      color,
+      min_price,
+      max_price,
+      price,
+      shipping,
+    },
     updateFilters,
     clearFilters,
     all_products,
@@ -115,7 +124,20 @@ const Filters = () => {
               value={price}
             />
           </div>
+          <div className='form-control shipping'>
+            <label htmlFor='shipping'>Free Shippping</label>
+            <input
+              type='checkbox'
+              name='shipping'
+              id='shipping'
+              onChange={updateFilters}
+              checked={shipping}
+            />
+          </div>
         </form>
+        <button type='button' className='clear-btn' onClick={clearFilters}>
+          Clear Filters
+        </button>
       </div>
     </Wrapper>
   );
